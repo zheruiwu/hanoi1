@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>    
+    <meta charset="UTF-8">
+    <title>汉诺塔问题</title>
+    <style>
+        canvas { background-color: #f0f0f0; }
+    </style>
+</head>
+<body>
+    <canvas id="hanoiCanvas" width="600" height="400"></canvas>
+    <br>
+    <label for="numDisks">选择圆盘数量：</label>
+    <select id="numDisks">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3" selected>3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+    </select>
+    <button onclick="startGame()">开始游戏</button>
+    <br>
+    汉诺塔移动圆盘的规则如下：
+    <br>
+    用鼠标拖动操作，把起始柱A上所有的圆盘都移动到C柱，且在移动过程中始终保持圆盘从小到大排列，即大盘在下、小盘在上。    
+    <br> 
+    <button onclick="showHints()">提示</button>
+    <br> 
+    <textarea id="hintsBox" rows="10" cols="30" readonly></textarea>
+    
+    <script src="hanoi.js"></script>
+</body>
+</html>
